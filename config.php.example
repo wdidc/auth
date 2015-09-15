@@ -1,0 +1,4 @@
+<?php
+  define("CLIENT_ID", "from github application");
+  define("CLIENT_SECRET", "from github application");
+?>
