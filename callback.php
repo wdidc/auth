@@ -83,16 +83,7 @@ if(count($range) < 3){
 }
 imagedestroy($img);
 
-$studs = json_decode(file_get_contents("students.json"), true);
-// If student exists, update. Otherwise, create.
-$student_number = get_student_index($student, $studs);
-if($student_number){
-  $studs[$student_number] = $student;
-}else{
-  $studs[] = $student;
-}
-
-file_put_contents("students.json", json_encode($studs));
+// TODO: update persisted student information
 
 echo("--><p>Success! Here's the information we got for you:</p><pre>");
 print_r($student);
